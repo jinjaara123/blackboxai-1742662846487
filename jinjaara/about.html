@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - JINJAARA</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJESURBVFhH7ZY9aBRBFMf/b3Zv70zOmBgRFYkKgiBYiGAhCFqIhYVgYythwUIrGwsLwUoQBBsRFSxEBEEQq4CFWFiIhYVY2IQQSTxNvGTvdm/3bHxv9rK3l9vbvQ8JhPxhmN2ZN+/9d2b2zR4jTQgh8J+yrX8zzWbzUr1evynLco+u6wZ9vqmq6pd8Pv+E+idkWf6K/xTbtrsrlcrdWq02oWkakGBqtRpM0wTDMKAoCqrV6pd8Pn+HxnxCKwGO42i1Wu2xpmnHaMz3fdi2DcuyEsKSJIHneQRBgEKh8LZYLAacnYZWAprN5qVKpTJBzxRJYqFQyBKPxWJoNBrI5XKPaUwSWgkQQnRblnWCnv3kHMeBaZoJ8TAMEYYhwXEc6Lp+nMYkoZWAJEiIZVkwDCMhHkURoiiiZ4ZhoCjKbxqThFYCGIY5wLLsTnoOggCu6yaEaQ/QvqD5tm3voTFJaCVAVdWviqJ8p2chhOj1eiQYx3Vd+L5P84UQyOfzr2lMEloJyOVyTxRFWaJnEqUNSM/UhGEYkjwVJ8/zP0ul0gcak4TWTajr+k1d1+/RMzUdNR81YiwWf0aaphFFUQzDMG7QmCTsyEYMw/AsbUoaR81HjUjPQRBcLxQKz2k+K9uyFWkTrlQqk7Ztn6Yx1Hy0EUkwiqLFYrF4kcb8DbZ1L6B7Qa1WO12v1+/TpqPkNEfvBfl8/nmxWPxEY/6EHbkZWZY1XC6XJ0ul0oyu67/oOr5er6+Wy+UZzvkLfhkXOCTLdqYAAAAASUVORK5CYII=">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand': {
+                            'primary': '#2C3E50',
+                            'secondary': '#34495E',
+                            'accent': '#E67E22',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-3xl font-playfair font-bold text-brand-primary">JINJAARA</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-brand-primary hover:text-brand-accent transition-colors">Home</a>
+                    <a href="products.html" class="text-brand-primary hover:text-brand-accent transition-colors">Collection</a>
+                    <a href="about.html" class="text-brand-accent font-medium">About</a>
+                    <a href="cart.html" class="text-brand-primary hover:text-brand-accent transition-colors">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="ml-1">Cart</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-brand-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 pb-4">
+                    <a href="index.html" class="text-brand-primary hover:text-brand-accent transition-colors">Home</a>
+                    <a href="products.html" class="text-brand-primary hover:text-brand-accent transition-colors">Collection</a>
+                    <a href="about.html" class="text-brand-accent font-medium">About</a>
+                    <a href="cart.html" class="text-brand-primary hover:text-brand-accent transition-colors">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="ml-1">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <!-- Hero Section -->
+        <section class="relative h-[400px] mb-16">
+            <div class="absolute inset-0">
+                <img src="https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                     alt="JINJAARA workshop" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            </div>
+            <div class="relative container mx-auto px-4 h-full flex items-center">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-playfair font-bold mb-4">Our Story</h1>
+                    <p class="text-lg md:text-xl">Crafting timeless pieces that blend contemporary design with traditional craftsmanship.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <div class="container mx-auto px-4">
+            <!-- Mission & Vision -->
+            <section class="mb-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-playfair font-bold mb-6">Our Mission</h2>
+                        <p class="text-gray-600 mb-6">
+                            At JINJAARA, we believe in creating clothing that not only looks beautiful but feels exceptional to wear. Our mission is to provide high-quality, sustainable fashion that empowers individuals to express their unique style while maintaining a commitment to ethical manufacturing practices.
+                        </p>
+                        <p class="text-gray-600">
+                            We strive to blend traditional craftsmanship with modern design, creating pieces that stand the test of time both in style and durability. Our commitment to sustainability drives every decision we make, from sourcing materials to packaging our products.
+                        </p>
+                    </div>
+                    <div class="relative h-[400px]">
+                        <img src="https://images.pexels.com/photos/3965548/pexels-photo-3965548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="JINJAARA design process" 
+                             class="w-full h-full object-cover rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-playfair font-bold text-center mb-12">Our Values</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-brand-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-leaf text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Sustainability</h3>
+                        <p class="text-gray-600">
+                            We prioritize eco-friendly materials and sustainable manufacturing processes to minimize our environmental impact.
+                        </p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-brand-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Quality</h3>
+                        <p class="text-gray-600">
+                            Each piece is crafted with attention to detail, using premium materials to ensure lasting quality.
+                        </p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 bg-brand-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Community</h3>
+                        <p class="text-gray-600">
+                            We believe in building strong relationships with our customers and supporting local communities.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-playfair font-bold text-center mb-12">Meet Our Team</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="relative mb-4 rounded-full overflow-hidden w-48 h-48 mx-auto">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                 alt="Sarah Johnson" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold">Sarah Johnson</h3>
+                        <p class="text-gray-600">Founder & Creative Director</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative mb-4 rounded-full overflow-hidden w-48 h-48 mx-auto">
+                            <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                 alt="Michael Chen" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold">Michael Chen</h3>
+                        <p class="text-gray-600">Head of Design</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative mb-4 rounded-full overflow-hidden w-48 h-48 mx-auto">
+                            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                 alt="Emma Roberts" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold">Emma Roberts</h3>
+                        <p class="text-gray-600">Sustainability Manager</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="relative mb-4 rounded-full overflow-hidden w-48 h-48 mx-auto">
+                            <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                 alt="David Kim" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold">David Kim</h3>
+                        <p class="text-gray-600">Production Manager</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-playfair font-bold text-center mb-12">Get in Touch</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" name="name" required
+                                       class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand-accent focus:outline-none">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand-accent focus:outline-none">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" required
+                                          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand-accent focus:outline-none"></textarea>
+                            </div>
+                            <button type="submit" 
+                                    class="w-full bg-brand-primary hover:bg-brand-accent text-white py-3 rounded-lg transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Visit Our Store</h3>
+                            <p class="text-gray-600">
+                                123 Fashion Street<br>
+                                New York, NY 10001<br>
+                                United States
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                            <div class="space-y-2 text-gray-600">
+                                <p><i class="fas fa-envelope mr-2 text-brand-accent"></i> info@jinjaara.com</p>
+                                <p><i class="fas fa-phone mr-2 text-brand-accent"></i> +1 (555) 123-4567</p>
+                                <p><i class="fas fa-clock mr-2 text-brand-accent"></i> Mon-Fri: 9AM-6PM EST</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-600 hover:text-brand-accent transition-colors">
+                                    <i class="fab fa-facebook-f text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-brand-accent transition-colors">
+                                    <i class="fab fa-instagram text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-brand-accent transition-colors">
+                                    <i class="fab fa-twitter text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-brand-accent transition-colors">
+                                    <i class="fab fa-pinterest text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-playfair font-bold mb-4">JINJAARA</h3>
+                    <p class="text-gray-400">Modern clothing for the modern individual.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition-colors">Collection</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="cart.html" class="text-gray-400 hover:text-white transition-colors">Cart</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2"></i> info@jinjaara.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Fashion St, NY 10001</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 JINJAARA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Form Handler
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
