@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection - JINJAARA</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJESURBVFhH7ZY9aBRBFMf/b3Zv70zOmBgRFYkKgiBYiGAhCFqIhYVgYythwUIrGwsLwUoQBBsRFSxEBEEQq4CFWFiIhYVY2IQQSTxNvGTvdm/3bHxv9rK3l9vbvQ8JhPxhmN2ZN+/9d2b2zR4jTQgh8J+yrX8zzWbzUr1evynLco+u6wZ9vqmq6pd8Pv+E+idkWf6K/xTbtrsrlcrdWq02oWkakGBqtRpM0wTDMKAoCqrV6pd8Pn+HxnxCKwGO42i1Wu2xpmnHaMz3fdi2DcuyEsKSJIHneQRBgEKh8LZYLAacnYZWAprN5qVKpTJBzxRJYqFQyBKPxWJoNBrI5XKPaUwSWgkQQnRblnWCnv3kHMeBaZoJ8TAMEYYhwXEc6Lp+nMYkoZWAJEiIZVkwDCMhHkURoiiiZ4ZhoCjKbxqThFYCGIY5wLLsTnoOggCu6yaEaQ/QvqD5tm3voTFJaCVAVdWviqJ8p2chhOj1eiQYx3Vd+L5P84UQyOfzr2lMEloJyOVyTxRFWaJnEqUNSM/UhGEYkjwVJ8/zP0ul0gcak4TWTajr+k1d1+/RMzUdNR81YiwWf0aaphFFUQzDMG7QmCTsyEYMw/AsbUoaR81HjUjPQRBcLxQKz2k+K9uyFWkTrlQqk7Ztn6Yx1Hy0EUkwiqLFYrF4kcb8DbZ1L6B7Qa1WO12v1+/TpqPkNEfvBfl8/nmxWPxEY/6EHbkZWZY1XC6XJ0ul0oyu67/oOr5er6+Wy+UZzvkLfhkXOCTLdqYAAAAASUVORK5CYII=">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand': {
+                            'primary': '#2C3E50',
+                            'secondary': '#34495E',
+                            'accent': '#E67E22',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-3xl font-playfair font-bold text-brand-primary">JINJAARA</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-brand-primary hover:text-brand-accent transition-colors">Home</a>
+                    <a href="products.html" class="text-brand-accent font-medium">Collection</a>
+                    <a href="about.html" class="text-brand-primary hover:text-brand-accent transition-colors">About</a>
+                    <a href="cart.html" class="text-brand-primary hover:text-brand-accent transition-colors">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="ml-1">Cart</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-brand-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 pb-4">
+                    <a href="index.html" class="text-brand-primary hover:text-brand-accent transition-colors">Home</a>
+                    <a href="products.html" class="text-brand-accent font-medium">Collection</a>
+                    <a href="about.html" class="text-brand-primary hover:text-brand-accent transition-colors">About</a>
+                    <a href="cart.html" class="text-brand-primary hover:text-brand-accent transition-colors">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="ml-1">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <!-- Page Title -->
+            <h1 class="text-4xl font-playfair font-bold text-center mb-12">Our Collection</h1>
+
+            <!-- Filters and Products Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Filters Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white p-6 rounded-lg shadow-md sticky top-24">
+                        <h2 class="text-xl font-semibold mb-6">Filters</h2>
+                        
+                        <!-- Category Filter -->
+                        <div class="mb-6">
+                            <h3 class="font-semibold mb-3">Category</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox text-brand-accent rounded" value="tops">
+                                    <span class="ml-2">Tops</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox text-brand-accent rounded" value="dresses">
+                                    <span class="ml-2">Dresses</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox text-brand-accent rounded" value="outerwear">
+                                    <span class="ml-2">Outerwear</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="checkbox" class="form-checkbox text-brand-accent rounded" value="pants">
+                                    <span class="ml-2">Pants</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Size Filter -->
+                        <div class="mb-6">
+                            <h3 class="font-semibold mb-3">Size</h3>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button class="px-4 py-2 border rounded hover:bg-brand-accent hover:text-white transition-colors size-filter">XS</button>
+                                <button class="px-4 py-2 border rounded hover:bg-brand-accent hover:text-white transition-colors size-filter">S</button>
+                                <button class="px-4 py-2 border rounded hover:bg-brand-accent hover:text-white transition-colors size-filter">M</button>
+                                <button class="px-4 py-2 border rounded hover:bg-brand-accent hover:text-white transition-colors size-filter">L</button>
+                                <button class="px-4 py-2 border rounded hover:bg-brand-accent hover:text-white transition-colors size-filter">XL</button>
+                            </div>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="mb-6">
+                            <h3 class="font-semibold mb-3">Price Range</h3>
+                            <div class="space-y-4">
+                                <input type="range" min="0" max="200" value="150" class="w-full accent-brand-accent" id="price-range">
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>$0</span>
+                                    <span id="price-value">$150</span>
+                                    <span>$200</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Apply Filters Button -->
+                        <button class="w-full bg-brand-primary hover:bg-brand-accent text-white py-2 rounded transition-colors" id="apply-filters">
+                            Apply Filters
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="lg:col-span-3">
+                    <!-- Sort Options -->
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex items-center">
+                            <span class="mr-2">Sort by:</span>
+                            <select class="border rounded px-3 py-1" id="sort-select">
+                                <option value="latest">Latest</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name</option>
+                            </select>
+                        </div>
+                        <div class="text-gray-600">
+                            Showing <span id="product-count">0</span> products
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="products-grid">
+                        <!-- Products will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-playfair font-bold mb-4">JINJAARA</h3>
+                    <p class="text-gray-400">Modern clothing for the modern individual.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition-colors">Collection</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="cart.html" class="text-gray-400 hover:text-white transition-colors">Cart</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2"></i> info@jinjaara.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Fashion St, NY 10001</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 JINJAARA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Price Range Slider
+        const priceRange = document.getElementById('price-range');
+        const priceValue = document.getElementById('price-value');
+
+        priceRange.addEventListener('input', (e) => {
+            priceValue.textContent = `$${e.target.value}`;
+        });
+
+        // Size Filter Buttons
+        const sizeButtons = document.querySelectorAll('.size-filter');
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('bg-brand-accent');
+                button.classList.toggle('text-white');
+            });
+        });
+
+        // Load and Display Products
+        async function loadProducts() {
+            try {
+                const response = await fetch('./assets/data/products.json');
+                const data = await response.json();
+                displayProducts(data.products);
+                document.getElementById('product-count').textContent = data.products.length;
+            } catch (error) {
+                console.error('Error loading products:', error);
+                document.getElementById('products-grid').innerHTML = '<p class="text-red-500">Error loading products. Please try again later.</p>';
+            }
+        }
+
+        function displayProducts(products) {
+            const productsGrid = document.getElementById('products-grid');
+            productsGrid.innerHTML = '';
+
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2';
+                productCard.innerHTML = `
+                    <div class="relative group">
+                        <img src="${product.images[0]}" alt="${product.name}" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <a href="product.html?id=${product.id}" class="block text-center bg-brand-primary hover:bg-brand-accent text-white px-6 py-2 rounded-full transition-colors mb-4">
+                            View Details
+                        </a>
+                        <h3 class="text-xl font-semibold mb-2">${product.name}</h3>
+                        <p class="text-gray-600 mb-4">$${product.price}</p>
+                        <div class="flex flex-wrap gap-2">
+                            ${product.availableSizes.map(size => 
+                                `<span class="text-sm px-2 py-1 bg-gray-100 rounded">${size}</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                `;
+                productsGrid.appendChild(productCard);
+            });
+        }
+
+        // Sort Products
+        document.getElementById('sort-select').addEventListener('change', async (e) => {
+            const response = await fetch('assets/data/products.json');
+            const data = await response.json();
+            let products = [...data.products];
+
+            switch(e.target.value) {
+                case 'price-low':
+                    products.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-high':
+                    products.sort((a, b) => b.price - a.price);
+                    break;
+                case 'name':
+                    products.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                default:
+                    // Latest - no sorting needed as products are already in latest order
+                    break;
+            }
+
+            displayProducts(products);
+        });
+
+        // Load products when page loads
+        window.addEventListener('load', loadProducts);
+    </script>
+</body>
+</html>
