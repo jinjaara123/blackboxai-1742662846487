@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Classic White Blouse",
+      "description": "A timeless white blouse crafted from premium cotton blend fabric. Features elegant button details and a flattering cut that suits any occasion.",
+      "price": 89.99,
+      "images": [
+        "https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg",
+        "https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg"
+      ],
+      "category": "tops",
+      "availableSizes": ["XS", "S", "M", "L", "XL"],
+      "availableColors": ["White", "Off-White"],
+      "tags": ["blouse", "formal", "casual", "office-wear"]
+    },
+    {
+      "id": 2,
+      "name": "Elegant Black Dress",
+      "description": "A sophisticated black dress perfect for evening events. Made with high-quality fabric that drapes beautifully and features subtle side slits.",
+      "price": 149.99,
+      "images": [
+        "https://images.pexels.com/photos/6766271/pexels-photo-6766271.jpeg",
+        "https://images.pexels.com/photos/6766271/pexels-photo-6766271.jpeg"
+      ],
+      "category": "dresses",
+      "availableSizes": ["S", "M", "L", "XL"],
+      "availableColors": ["Black"],
+      "tags": ["dress", "evening-wear", "formal", "party"]
+    },
+    {
+      "id": 3,
+      "name": "Casual Denim Jacket",
+      "description": "A versatile denim jacket that adds an effortlessly cool touch to any outfit. Features classic button closures and comfortable fit.",
+      "price": 129.99,
+      "images": [
+        "https://images.pexels.com/photos/6764037/pexels-photo-6764037.jpeg",
+        "https://images.pexels.com/photos/6764037/pexels-photo-6764037.jpeg"
+      ],
+      "category": "outerwear",
+      "availableSizes": ["S", "M", "L", "XL"],
+      "availableColors": ["Blue", "Light Blue"],
+      "tags": ["jacket", "denim", "casual", "everyday"]
+    },
+    {
+      "id": 4,
+      "name": "Floral Summer Dress",
+      "description": "A light and airy summer dress featuring a beautiful floral print. Perfect for warm days and garden parties.",
+      "price": 119.99,
+      "images": [
+        "https://images.pexels.com/photos/6765185/pexels-photo-6765185.jpeg",
+        "https://images.pexels.com/photos/6765185/pexels-photo-6765185.jpeg"
+      ],
+      "category": "dresses",
+      "availableSizes": ["XS", "S", "M", "L"],
+      "availableColors": ["Multicolor"],
+      "tags": ["dress", "summer", "floral", "casual"]
+    },
+    {
+      "id": 5,
+      "name": "Tailored Black Pants",
+      "description": "Classic black pants with a modern tailored fit. Perfect for office wear or formal occasions.",
+      "price": 99.99,
+      "images": [
+        "https://images.pexels.com/photos/6764023/pexels-photo-6764023.jpeg",
+        "https://images.pexels.com/photos/6764023/pexels-photo-6764023.jpeg"
+      ],
+      "category": "pants",
+      "availableSizes": ["S", "M", "L", "XL"],
+      "availableColors": ["Black"],
+      "tags": ["pants", "formal", "office-wear", "basics"]
+    }
+  ]
+}
