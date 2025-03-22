@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - JINJAARA</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJESURBVFhH7ZY9aBRBFMf/b3Zv70zOmBgRFYkKgiBYiGAhCFqIhYVgYythwUIrGwsLwUoQBBsRFSxEBEEQq4CFWFiIhYVY2IQQSTxNvGTvdm/3bHxv9rK3l9vbvQ8JhPxhmN2ZN+/9d2b2zR4jTQgh8J+yrX8zzWbzUr1evynLco+u6wZ9vqmq6pd8Pv+E+idkWf6K/xTbtrsrlcrdWq02oWkakGBqtRpM0wTDMKAoCqrV6pd8Pn+HxnxCKwGO42i1Wu2xpmnHaMz3fdi2DcuyEsKSJIHneQRBgEKh8LZYLAacnYZWAprN5qVKpTJBzxRJYqFQyBKPxWJoNBrI5XKPaUwSWgkQQnRblnWCnv3kHMeBaZoJ8TAMEYYhwXEc6Lp+nMYkoZWAJEiIZVkwDCMhHkURoiiiZ4ZhoCjKbxqThFYCGIY5wLLsTnoOggCu6yaEaQ/QvqD5tm3voTFJaCVAVdWviqJ8p2chhOj1eiQYx3Vd+L5P84UQyOfzr2lMEloJyOVyTxRFWaJnEqUNSM/UhGEYkjwVJ8/zP0ul0gcak4TWTajr+k1d1+/RMzUdNR81YiwWf0aaphFFUQzDMG7QmCTsyEYMw/AsbUoaR81HjUjPQRBcLxQKz2k+K9uyFWkTrlQqk7Ztn6Yx1Hy0EUkwiqLFYrF4kcb8DbZ1L6B7Qa1WO12v1+/TpqPkNEfvBfl8/nmxWPxEY/6EHbkZWZY1XC6XJ0ul0oyu67/oOr5er6+Wy+UZzvkLfhkXOCTLdqYAAAAASUVORK5CYII=">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand': {
+                            'primary': '#2C3E50',
+                            'secondary': '#34495E',
+                            'accent': '#E67E22',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-3xl font-playfair font-bold text-brand-primary">JINJAARA</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-brand-primary hover:text-brand-accent transition-colors">Home</a>
+                    <a href="products.html" class="text-brand-primary hover:text-brand-accent transition-colors">Collection</a>
+                    <a href="about.html" class="text-brand-primary hover:text-brand-accent transition-colors">About</a>
+                    <a href="cart.html" class="text-brand-primary hover:text-brand-accent transition-colors">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="ml-1">Cart</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-brand-primary" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4 mt-4 pb-4">
+                    <a href="index.html" class="text-brand-primary hover:text-brand-accent transition-colors">Home</a>
+                    <a href="products.html" class="text-brand-primary hover:text-brand-accent transition-colors">Collection</a>
+                    <a href="about.html" class="text-brand-primary hover:text-brand-accent transition-colors">About</a>
+                    <a href="cart.html" class="text-brand-primary hover:text-brand-accent transition-colors">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="ml-1">Cart</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <!-- Breadcrumb -->
+            <nav class="mb-8">
+                <ol class="flex items-center space-x-2 text-sm">
+                    <li><a href="index.html" class="text-brand-primary hover:text-brand-accent">Home</a></li>
+                    <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                    <li><a href="products.html" class="text-brand-primary hover:text-brand-accent">Collection</a></li>
+                    <li><i class="fas fa-chevron-right text-gray-400"></i></li>
+                    <li class="text-gray-600" id="product-name-breadcrumb">Product Name</li>
+                </ol>
+            </nav>
+
+            <!-- Product Details -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Product Images -->
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg overflow-hidden">
+                        <img id="main-image" src="" alt="" class="w-full h-[500px] object-cover">
+                    </div>
+                    <div class="grid grid-cols-4 gap-4" id="thumbnail-container">
+                        <!-- Thumbnails will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div>
+                    <h1 id="product-name" class="text-3xl font-playfair font-bold mb-4">Product Name</h1>
+                    <p id="product-price" class="text-2xl text-brand-accent font-semibold mb-6">$0.00</p>
+                    
+                    <div class="mb-8">
+                        <h2 class="font-semibold mb-2">Description</h2>
+                        <p id="product-description" class="text-gray-600"></p>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="mb-8">
+                        <h2 class="font-semibold mb-2">Select Size</h2>
+                        <div class="grid grid-cols-5 gap-2" id="size-options">
+                            <!-- Size options will be loaded here -->
+                        </div>
+                        <p id="size-error" class="text-red-500 mt-2 hidden">Please select a size</p>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="mb-8">
+                        <h2 class="font-semibold mb-2">Available Colors</h2>
+                        <div class="flex flex-wrap gap-2" id="color-options">
+                            <!-- Color options will be loaded here -->
+                        </div>
+                        <p id="color-error" class="text-red-500 mt-2 hidden">Please select a color</p>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="mb-8">
+                        <h2 class="font-semibold mb-2">Quantity</h2>
+                        <div class="flex items-center space-x-4">
+                            <button id="decrease-quantity" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span id="quantity" class="text-xl">1</span>
+                            <button id="increase-quantity" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <div class="sticky bottom-0 bg-white p-4 border-t mt-8">
+                        <button id="add-to-cart" class="w-full bg-brand-primary hover:bg-brand-accent text-white py-4 rounded-full transition-colors text-lg font-semibold">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="space-y-4 text-sm text-gray-600 mt-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-truck w-6"></i>
+                            <span>Free shipping on orders over $100</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-undo w-6"></i>
+                            <span>30-day return policy</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt w-6"></i>
+                            <span>Secure checkout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-playfair font-bold mb-4">JINJAARA</h3>
+                    <p class="text-gray-400">Modern clothing for the modern individual.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition-colors">Collection</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="cart.html" class="text-gray-400 hover:text-white transition-colors">Cart</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2"></i> info@jinjaara.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Fashion St, NY 10001</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 JINJAARA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Product data and cart management
+        let currentProduct = null;
+        let selectedSize = null;
+        let selectedColor = null;
+        let quantity = 1;
+
+        // Load product details
+        async function loadProductDetails() {
+            try {
+                const response = await fetch('./assets/data/products.json');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch product data');
+                }
+                const data = await response.json();
+                
+                currentProduct = data.products.find(p => p.id === parseInt(productId));
+                
+                if (!currentProduct) {
+                    throw new Error('Product not found');
+                }
+
+                updateProductDetails();
+            } catch (error) {
+                console.error('Error loading product:', error);
+                document.querySelector('main').innerHTML = `
+                    <div class="container mx-auto px-4 py-16 text-center">
+                        <h1 class="text-2xl text-red-500 mb-4">Error Loading Product</h1>
+                        <p class="mb-8">Sorry, we couldn't find the product you're looking for.</p>
+                        <a href="products.html" class="bg-brand-primary hover:bg-brand-accent text-white px-6 py-2 rounded-full transition-colors">
+                            Return to Collection
+                        </a>
+                    </div>
+                `;
+            }
+        }
+
+        function updateProductDetails() {
+            // Update basic info
+            document.title = `${currentProduct.name} - JINJAARA`;
+            document.getElementById('product-name-breadcrumb').textContent = currentProduct.name;
+            document.getElementById('product-name').textContent = currentProduct.name;
+            document.getElementById('product-price').textContent = `$${currentProduct.price}`;
+            document.getElementById('product-description').textContent = currentProduct.description;
+
+            // Update main image and thumbnails
+            const mainImage = document.getElementById('main-image');
+            mainImage.src = currentProduct.images[0];
+            mainImage.alt = currentProduct.name;
+
+            const thumbnailContainer = document.getElementById('thumbnail-container');
+            thumbnailContainer.innerHTML = currentProduct.images.map((img, index) => `
+                <button class="bg-white rounded-lg overflow-hidden ${index === 0 ? 'ring-2 ring-brand-accent' : ''}" 
+                        onclick="updateMainImage('${img}', this)">
+                    <img src="${img}" alt="${currentProduct.name}" class="w-full h-24 object-cover">
+                </button>
+            `).join('');
+
+            // Update size options
+            const sizeOptions = document.getElementById('size-options');
+            sizeOptions.innerHTML = currentProduct.availableSizes.map(size => `
+                <button class="py-2 border rounded hover:border-brand-accent hover:text-brand-accent transition-colors size-option"
+                        onclick="selectSize('${size}', this)">
+                    ${size}
+                </button>
+            `).join('');
+
+            // Update color options
+            const colorOptions = document.getElementById('color-options');
+            colorOptions.innerHTML = currentProduct.availableColors.map(color => `
+                <button class="px-6 py-2 border rounded hover:border-brand-accent hover:text-brand-accent transition-colors color-option"
+                        onclick="selectColor('${color}', this)">
+                    ${color}
+                </button>
+            `).join('');
+        }
+
+        function updateMainImage(src, button) {
+            document.getElementById('main-image').src = src;
+            // Update thumbnail selection
+            document.querySelectorAll('#thumbnail-container button').forEach(btn => {
+                btn.classList.remove('ring-2', 'ring-brand-accent');
+            });
+            button.classList.add('ring-2', 'ring-brand-accent');
+        }
+
+        function selectSize(size, button) {
+            selectedSize = size;
+            document.getElementById('size-error').classList.add('hidden');
+            // Update button styles
+            document.querySelectorAll('.size-option').forEach(btn => {
+                btn.classList.remove('bg-brand-accent', 'text-white');
+            });
+            button.classList.add('bg-brand-accent', 'text-white');
+        }
+
+        function selectColor(color, button) {
+            selectedColor = color;
+            document.getElementById('color-error').classList.add('hidden');
+            // Update button styles
+            document.querySelectorAll('.color-option').forEach(btn => {
+                btn.classList.remove('bg-brand-accent', 'text-white');
+            });
+            button.classList.add('bg-brand-accent', 'text-white');
+        }
+
+        // Quantity controls
+        document.getElementById('decrease-quantity').addEventListener('click', () => {
+            if (quantity > 1) {
+                quantity--;
+                document.getElementById('quantity').textContent = quantity;
+            }
+        });
+
+        document.getElementById('increase-quantity').addEventListener('click', () => {
+            quantity++;
+            document.getElementById('quantity').textContent = quantity;
+        });
+
+        // Add to Cart
+        document.getElementById('add-to-cart').addEventListener('click', () => {
+            if (!selectedSize) {
+                document.getElementById('size-error').classList.remove('hidden');
+                return;
+            }
+            if (!selectedColor) {
+                document.getElementById('color-error').classList.remove('hidden');
+                return;
+            }
+
+            const cartItem = {
+                id: currentProduct.id,
+                name: currentProduct.name,
+                price: currentProduct.price,
+                size: selectedSize,
+                color: selectedColor,
+                quantity: quantity,
+                image: currentProduct.images[0]
+            };
+
+            // Get existing cart or initialize new one
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Check if item already exists in cart
+            const existingItemIndex = cart.findIndex(item => 
+                item.id === cartItem.id && 
+                item.size === cartItem.size && 
+                item.color === cartItem.color
+            );
+
+            if (existingItemIndex !== -1) {
+                cart[existingItemIndex].quantity += quantity;
+            } else {
+                cart.push(cartItem);
+            }
+
+            // Save updated cart
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Show success message and redirect
+            const addToCartBtn = document.getElementById('add-to-cart');
+            addToCartBtn.textContent = 'Added to Cart!';
+            addToCartBtn.classList.add('bg-green-600');
+            
+            // Redirect to cart page after a short delay
+            setTimeout(() => {
+                window.location.href = 'cart.html';
+            }, 1000);
+        });
+
+        // Load product details when page loads
+        window.addEventListener('load', loadProductDetails);
+    </script>
+</body>
+</html>
